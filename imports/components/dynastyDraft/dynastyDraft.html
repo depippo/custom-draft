@@ -1,0 +1,143 @@
+<header>
+    <h1>2017 Dynasty League Draft</h1>
+
+    <login-buttons></login-buttons>
+       
+  <!--   <form class="new-task" ng-submit="$ctrl.addPlayer($ctrl.newPlayer)" ng-show="$ctrl.currentUser">
+      <input ng-model="$ctrl.newPlayer" type="text" name="text" placeholder="Type to add new players"/>
+    </form> -->
+</header>
+
+<div id="sticky">
+  <div id="first">
+        <ul>
+          <li class="highlightgray" ng-repeat="drafter in $ctrl.draftOrderPre3">
+          <div class="textbox strike">
+                <p class="lefttext"></p>
+                <p class="righttext"><strike>{{drafter.turn}}. {{drafter.name}}<strike></p>
+                <div style="clear: both;"></div>
+          </div>
+          </li>
+        </ul>
+        <ul>
+          <li class="highlightgray" ng-repeat="drafter in $ctrl.draftOrderPre2">
+          <div class="textbox strike">
+                <p class="lefttext"></p>
+                <p class="righttext"><strike>{{drafter.turn}}. {{drafter.name}}</strike></p>
+                <div style="clear: both;"></div>
+          </div>
+          </li>
+        </ul>
+        <ul>
+          <li class="highlightgray" ng-repeat="drafter in $ctrl.draftOrderPre1">
+          <div class="textbox strike">
+                <p class="lefttext"></p>
+                <p class="righttext"><strike>{{drafter.turn}}. {{drafter.name}}</strike></p>
+                <div style="clear: both;"></div>
+          </div>          
+          </li>
+        </ul>
+        <ul>
+          <li class="highlightgreen" ng-repeat="drafter in $ctrl.draftOrderCurrent">
+          <div class="textbox"> 
+                <p class="lefttext">Now drafting: </p>
+                <p class="righttext">{{drafter.turn}}. {{drafter.name}}</p>
+                <div style="clear: both;"></div>
+          </div>          
+          </li>
+        </ul>
+        <ul>
+          <li class="highlightyellow" ng-repeat="drafter in $ctrl.draftOrderPost1">
+          <div class="textbox"> 
+                <p class='lefttext'>On deck: </p>
+                <p class="righttext">{{drafter.turn}}. {{drafter.name}}</p>
+                <div style="clear: both;"></div>
+          </div>          
+          </li>
+        </ul>
+        <ul>
+          <li class="highlightorange" ng-repeat="drafter in $ctrl.draftOrderPost2">
+          <div class="textbox"> 
+                <p class="lefttext">In the hole: </p>
+                <p class="righttext">{{drafter.turn}}. {{drafter.name}}</p>
+                <div style="clear: both;"></div>
+          </div>          
+          </li>
+        </ul>
+        <ul>
+          <li class="highlightred" ng-repeat="drafter in $ctrl.draftOrderPost3">
+          <div id="textbox"> 
+                <p class="lefttext"></p>
+                <p class="righttext">{{drafter.turn}}. {{drafter.name}}</p>
+                <div style="clear: both;"></div>
+          </div>          
+          </li>
+        </ul>
+  </div>
+</div> <!-- div class sticky -->
+
+
+
+<div id="second">
+    <div id="messages">
+      <ul>
+        <li ng-repeat="message in $ctrl.displayMessages"> 
+            {{message.draftmessage}}
+        </li>
+      </ul>
+    </div> <!-- div id messages -->
+
+  </div>  <!-- div id second -->
+
+<div id="third">
+  <p class="head">Your players:</p>
+    <ul>
+      <li ng-repeat="player in $ctrl.userplayers"> 
+          {{player.name}} - {{player.position}} - {{player.team}}
+      </li>
+    </ul>
+</div> <!-- div id third
+ -->
+
+<div id="clear">
+
+    <table id="keywords">
+      <div class="header-row row">
+        <thead>
+          <tr>
+            <th class="cell name">Player Name</th>
+            <th class="cell position">Position</th>
+            <th class="cell team">Team</span></th>
+            <th class="cell rank">MLB.com Top 100 Rank</th>
+            <th class="cell yrank">2016 End of Year Rank</th>
+            <th class="cell draftlink"></th>
+          </tr>
+        </thead>
+      </div>
+      <tbody>
+        <div class="row">
+        <input type="radio" name="expand">
+          <tr ng-repeat="player in $ctrl.players">
+            <td class="cell name" data-label="Name">{{player.name}}</td>
+            <td class="cell position" data-label="Position">{{player.position}}</td>
+            <td class="cell team" data-label="Team">{{player.team}}</td>
+            <td class="cell rank" data-label="Rank">{{player.rank}}</td>
+            <td class="cell yrank" data-label="YRank">{{player.yrank}}</td>
+            <td class="cell draftlink" data-label="Draft">
+              <button type="submit" ng-click="$ctrl.removePlayer(player)">Draft this player</button>
+            </td>
+          </tr>
+      </tbody>
+    </div>
+  </div>
+</div> <!-- div id clear -->
+
+<li ng-repeat="task in $ctrl.displayAdminTasks">
+<button type="submit" ng-click="$ctrl.startDraft()">Start the draft</button>
+</li>
+
+</div> <!-- div id everything -->
+
+
+
+
