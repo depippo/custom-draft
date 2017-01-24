@@ -1237,8 +1237,6 @@ Players.insert({name: 'Chris Hatcher', position: 'RP', team: 'Los Angeles Dodger
 
 Players.insert({name: 'Dillon Gee', position: 'SP,RP', team: 'Texas Rangers', rank: '', yrank: '' })
 
-Players.insert({name: 'Jarrod Dyson', position: 'OF', team: 'Seattle Mariners', rank: '', yrank: 779 })
-
 Players.insert({name: 'Michael McKenry', position: 'C', team: 'Milwaukee Brewers', rank: '', yrank: '' })
 
 Players.insert({name: 'Alex Presley', position: 'OF', team: 'Detroit Tigers', rank: '', yrank: '' })
@@ -1812,8 +1810,6 @@ Players.insert({name: 'Jon Denney', position: 'C', team: 'Boston Red Sox', rank:
 Players.insert({name: 'Arismendy Alcántara', position: '2B', team: 'Cincinnati Reds', rank: '', yrank: '' })
 
 Players.insert({name: 'Carl Edwards Jr.', position: 'RP', team: 'Chicago Cubs', rank: '', yrank: 216 })
-
-Players.insert({name: 'Daniel Vogelbach', position: '1B', team: 'Seattle Mariners', rank: '', yrank: '' })
 
 Players.insert({name: 'Pierce Johnson', position: 'SP', team: 'Chicago Cubs', rank: '', yrank: '' })
 
