@@ -21,7 +21,6 @@ import { adminTasks } from '../../api/players.js';
 
 import template from './dynastyDraft.html';
 
-
 const currentUserName = Meteor.user();
 var turn = 1;
 
