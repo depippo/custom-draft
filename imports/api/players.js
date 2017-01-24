@@ -37,7 +37,6 @@ Meteor.methods({
     };
     console.log(player.name);
 
-
     switch(username) {
       case "John":
         johnPlayers.insert({
